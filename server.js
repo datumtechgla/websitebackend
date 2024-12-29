@@ -10,7 +10,7 @@ app.use(helmet());
 app.use(express.json())
 app.use(cors({ origin: "*" }));
 //dbconfig
-const connectDB = require("./dbConfig");
+const connectDB = require("./dbconfig");
 
 //routers importing
 const memberRouter = require('./routers/Members.router')
