@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema(
+const MembersSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -13,22 +13,26 @@ const UserSchema = new mongoose.Schema(
     },
     imageUrl: {
       type: String,
-      required: false,
+      required: true,
     },
     post: {
       type: String,
-      required: false,
+      required: true,
     },
     teamName: {
       type: String,
-      required: false,
+      required: true,
     },
+    email:{
+      type:String,
+      required:true
+    }
   },
   {
     timestamps: true, 
   }
 );
 
-const User = mongoose.model("User", UserSchema);
+const Members = mongoose.model("members", MembersSchema);
 
-module.exports = User;
+module.exports = Members;
